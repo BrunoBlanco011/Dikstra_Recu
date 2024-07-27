@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Rutas del servicio público de transporte en la modalidad de pasajeros tipo colectivo.</h1>
+
+        <form id="addVertexForm">
+            <label for="vertexName">Agregar Ciudad:</label>
+            <input type="text" id="vertexName" placeholder="Nombre de la ciudad" required>
+            <button type="submit">Agregar Ciudad</button>
+        </form>
+
+        <form id="addEdgeForm">
+            <label for="startVertex">Ciudad de Inicio:</label>
+            <input type="text" id="startVertex" placeholder="Ciudad inicial" required>
+            <label for="endVertex">Ciudad de Destino:</label>
+            <input type="text" id="endVertex" placeholder="Ciudad final" required>
+            <label for="weight">Distancia en Kilómetros:</label>
+            <input type="number" id="weight" placeholder="Distancia">
+            <button type="submit">Agregar Ruta</button>
+        </form>
+
+        <button id="dfsBtn">Recorrido de Profundidad</button>
+
+        <div id="resultContainer"></div>
+
+        <!-- Formulario para Dijkstra -->
+        <form id="dijkstraForm">
+            <label for="startDijkstraVertex">Ciudad de Inicio para Dijkstra:</label>
+            <input type="text" id="startDijkstraVertex" placeholder="Ciudad de inicio" required>
+            <label for="endDijkstraVertex">Ciudad de Destino para Dijkstra:</label>
+            <input type="text" id="endDijkstraVertex" placeholder="Ciudad de destino" required>
+            <button type="submit">Calcular Dijkstra</button>
+        </form>
+        
+        <!-- Contenedor para los resultados de Dijkstra -->
+        <div id="dijkstraResultContainer" style="margin-top: 20px;"></div>
+    </div>
+
+    <script type="module" src="/src/controllers/Script.mjs"></script>
+</body>
+</html>
