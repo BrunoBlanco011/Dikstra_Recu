@@ -1,4 +1,4 @@
-import Graph from "../models/Graph.mjs"; 
+import Graph from "../models/Graph.mjs";
 
 document.addEventListener('DOMContentLoaded', function() {
     const grafo = new Graph(); 
